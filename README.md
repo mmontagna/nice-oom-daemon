@@ -6,5 +6,7 @@
 
 # Use in Docker
 
+```
 docker build -t nice-oom-daemon .
 docker run -v /var/run/docker.sock:/var/run/docker.sock nice-oom-daemon
+```
