@@ -39,7 +39,7 @@ setup(
   ],
   entry_points = {
     'console_scripts': [
-      'nice-oom = nice_oom.__main__:main',
+      'nice-oom-daemon = nice_oom.__main__:main',
     ],
   },
 )
