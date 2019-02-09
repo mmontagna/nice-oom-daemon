@@ -36,6 +36,7 @@ setup(
   license=open(os.path.join(dir_path, 'LICENSE')).read(),
   install_requires=[
     "simplejson>=3.8.0",
+    "docker"
   ],
   entry_points = {
     'console_scripts': [
