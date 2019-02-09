@@ -14,9 +14,13 @@ stop_program = [False]
 
 def monitor_container(container, stop_signals, grace_period):
   def helper():
-    print ("Monitoring container: " + container.id[:12])
     soft_memory_limit = container.attrs["HostConfig"]["MemoryReservation"]
     hard_memory_limit = container.attrs["HostConfig"]["Memory"]
+    if soft_memory_limit == 0:
+      print ("No soft limit set for container: " + container.id[:12] + " skipping monitoring.")
+      return
+
+    print ("Monitoring container: " + container.id[:12])
     time_over_limit_condition_started = None
     print ("soft_memory_limit: {}, hard_memory_limit: {}".format(soft_memory_limit, hard_memory_limit))
     for stat in container.stats():
