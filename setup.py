@@ -17,7 +17,7 @@ setup(
   long_description_content_type='text/markdown',
   author = 'Marco Montagna',
   author_email = 'marcojoemontagna@gmail.com',
-  url = 'https://github.com/mmontagna/oom-daemon-docker',
+  url = 'https://github.com/mmontagna/nice-oom-daemon',
   keywords = [],
   classifiers=(
       'Development Status :: 4 - Beta',
