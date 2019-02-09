@@ -7,11 +7,11 @@ VERSION = open(os.path.join(dir_path, 'VERSION')).read()
 
 
 setup(
-  name = 'nice-oom',
+  name = 'nice-oom-daemon',
   packages = find_packages(),
   version = VERSION,
   description = '''
-  A set of encoders which provide a simple string/byte based interface.
+  A daemon for docker which sends signals to containers when they hit their memory soft limit.
   ''',
   long_description=open(os.path.join(dir_path, 'README.md')).read(),
   long_description_content_type='text/markdown',
